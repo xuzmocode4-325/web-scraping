@@ -7,6 +7,12 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv(Path.cwd().parent.parent / '.env')
+
 BOT_NAME = "getting_started"
 
 SPIDER_MODULES = ["getting_started.spiders"]
@@ -14,7 +20,7 @@ NEWSPIDER_MODULE = "getting_started.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "getting_started (+http://www.yourdomain.com)"
+USER_AGENT = os.environ.get('AGENT')
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
