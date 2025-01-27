@@ -1,3 +1,5 @@
 data
 .env
 getting_started/population.json
+getting_started/audible_books.json
+getting_started/audible_books.csv
