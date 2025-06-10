@@ -3,3 +3,5 @@ data
 getting_started/population.json
 getting_started/audible_books.json
 getting_started/audible_books.csv
+getting_started/transcripts.csv
+getting_started/transcripts.json
